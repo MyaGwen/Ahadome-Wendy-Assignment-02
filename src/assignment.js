@@ -13,10 +13,18 @@ const assignment = {};
  * @param {Array} arrayOfNumbers the array of numbers to sum
  * @returns number the sum of the numbers
  */
-function sumOfNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
+function sumArray(array) {
+    for(
+        var
+        index = 0,
+        length = array.length,
+        sum = 0;
+        index < length;
+        sum += array[index++]
+    );
+    return sum;
 }
-// assignment.sumOfNumbers = sumOfNumbers;
+
 
 /**
  * Challenge - 2
@@ -27,10 +35,16 @@ function sumOfNumbers(arrayOfNumbers) {
  * @param {Array} arrayOfNumbers the array containing even or non-even numbers
  * @returns number the count of even numbers
  */
-function countEvenNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
+ function is_an_even_number(array){
+    var count = 0;
+    for(let i = 0 ; i < array.length; i++) {
+        if (array[i] % 2 === 0 && array[i] != "" && array[i] != []){
+            count++;
+        }
+    }
+    return count;
 }
-// assignment.countEvenNumbers = countEvenNumbers;
+
 
 /**
  * Challenge - 3
@@ -46,10 +60,24 @@ function countEvenNumbers(arrayOfNumbers) {
  * @param {Array} arrayOfNumbers the array containing temperatures in Celsius to be converted
  * @returns Array the converted temperatures in Fahrenheit
  */
-function celsiusToFahrenheit(arrayOfNumbers) {
-    return arrayOfNumbers;
-}
-// assignment.celsiusToFahrenheit = celsiusToFahrenheit;
+ function cToF(celsius) 
+ {
+   var cTemp = celsius;
+   var cToFahr = cTemp * 9 / 5 + 32;
+   var message = cTemp+'\xB0C is ' + cToFahr + ' \xB0F.';
+     console.log(message);
+ }
+ 
+ function fToC(fahrenheit) 
+ {
+   var fTemp = fahrenheit;
+   var fToCel = (fTemp - 32) * 5 / 9;
+   var message = fTemp+'\xB0F is ' + fToCel + '\xB0C.';
+     console.log(message);
+ } 
+ cToF(60);
+ fToC(45);
+
 
 
 // ========================
