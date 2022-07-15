@@ -32,16 +32,23 @@ assignment.sumOfNumbers = sumOfNumbers;
  * @param {Array} arrayOfNumbers the array containing even or non-even numbers
  * @returns number the count of even numbers
  */
- function sumOfNumbers(arrayOfNumbers) {
-    let sum = 0;
-    for (value of arrayOfNumbers) {
-      sum += value;
+ function countEvenNumbers(arrayOfNumbers) { 
+  let length = arrayOfNumbers.length; 
+  let i = 0; 
+  let evenCount = 0; 
+  while (i < length) { 
+    if (arrayOfNumbers[i] % 2 == 0) 
+    {
+       evenCount++; 
+      }
+       i++; 
+      } 
+      return (evenCount);
+    
     }
-      return sum;
-  }
-  assignment.sumOfNumbers = sumOfNumbers;
-    return count;
-}
+    assignment.countEvenNumbers = countEvenNumbers
+   
+
 
 
 /**
@@ -58,25 +65,12 @@ assignment.sumOfNumbers = sumOfNumbers;
  * @param {Array} arrayOfNumbers the array containing temperatures in Celsius to be converted
  * @returns Array the converted temperatures in Fahrenheit
  */
- function cToF(celsius) 
+ function celsiusToFahrenheit(arrayOfNumbers) 
  {
-   var cTemp = celsius;
-   var cToFahr = cTemp * 9 / 5 + 32;
-   var message = cTemp+'\xB0C is ' + cToFahr + ' \xB0F.';
-     console.log(message);
+   return arrayOfNumbers;
  }
- 
- function fToC(fahrenheit) 
- {
-   var fTemp = fahrenheit;
-   var fToCel = (fTemp - 32) * 5 / 9;
-   var message = fTemp+'\xB0F is ' + fToCel + '\xB0C.';
-     console.log(message);
- } 
- cToF(60);
- fToC(45);
 
-
+// assignment.celsiusToFahrenheit = celsiusToFahrenheit;
 
 // ========================
 // DO NOT EDIT THIS BLOCK
